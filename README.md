@@ -16,6 +16,8 @@ Lightweight web tool for real-time data streaming, built with confluent-kafka-py
 
 This is a lightweight Kafka tool that provides Consumer and Publisher functionality. The tool supports both `PLAINTEXT` and `SASL_PLAINTEXT` security protocols, with `SASL_PLAINTEXT` using `GSSAPI`. When selecting `SASL_PLAINTEXT`, you need to enter the corresponding SASL principal and password to successfully connect to the bootstrap server.
 
+After entering the bootstrap server, the connection will be established automatically. The icon next to the topic will show the connection result. If it is a green checkmark, it means the connection is successful, and `the topics section will automatically display a dropdown list of all topics` that the entered principal has permission to read. If it is a red cross, it means the connection failed, and the logs section will record the reason for the failure.
+
 ### Consumer
 
 ![Consumer](images/consumer.png)
